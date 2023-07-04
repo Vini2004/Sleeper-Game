@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Jogo de Cores</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+
 <body>
-  <h1>Jogo das Cores</h1>
-  <p>
-    O jogo é muito simples, você deve apenas clicar no botão com a cor correspondente ao alvo.<br>
-    O alvo sempre será a COR da palavra escrita na tela.<br>
-    Clique na cor correta antes que o tempo acabe para receber seu próximo alvo.<br>
-    Seus pontos são computados a cada acerto e termina se você demorar muito ou escolher a cor errada.
-  </p>
-  <div id="buttons">
-    <button id="startButton" class="button" onclick="startGame()">Iniciar</button>
-    <button id="rankingButton" class="button">Ver Ranking</button>
+
+  <nav class="navbar bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">Sleeper-Game</a>
+    </div>
+  </nav>
+
+  <div class="card text-center">
+    <div class="card-header">
+      Game
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Sobre o Jogo</h5>
+      <p class="card-text">O jogo é muito simples, você deve apenas clicar no botão com a cor correspondente ao alvo.
+        O alvo sempre será a COR da palavra escrita na tela.
+        Clique na cor correta antes que o tempo acabe para receber seu próximo alvo.
+        Seus pontos são computados a cada acerto e termina se você demorar muito ou escolher a cor errada.</p>
+      <div id="buttons">
+        <button id="startButton" class="btn btn-outline-primary" onclick="startGame()">Iniciar</button>
+        <button id="rankingButton" class="btn btn-outline-secondary">Ver Ranking</button>
+      </div>
+    </div>
+    <div class="card-footer text-body-secondary">
+    </div>
   </div>
 
-  <div id="randomWord"></div>
-  <div id="timer"></div>
-  <div id="score">0</div> <!-- Elemento para exibir a pontuação -->
-  <div id="level">Nível 1</div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div id="timer"></div>
+      </div>
+      <div class="col">
+        <div id="randomWord"></div>
+      </div>
+      <div class="col-2">
+        <div id="level">Nível 1</div>
+      </div>
+      <div class="col-2">
+        <div id="score">0</div> <!-- Elemento para exibir a pontuação -->
+      </div>
+    </div>
+  </div>
 
-  <div id="colorGrid">
+  <div id="colorGrid container">
     <div class="row">
       <div class="colorSquare" style="background-color: red;" onclick="checkAnswer('red')"></div>
       <div class="colorSquare" style="background-color: blue;" onclick="checkAnswer('blue')"></div>
@@ -39,11 +69,17 @@
       <div class="colorSquare" style="background-color: gray;" onclick="checkAnswer('gray')"></div>
     </div>
   </div>
-  
+
   <div id="restartContainer">
-    <button id="restartButton" class="button hide" onclick="resetGame()">Reiniciar</button>
+    <button id="restartButton" class="btn btn-outline-primary hide" onclick="resetGame()">Reiniciar</button>
   </div>
 
+  <ul id="rankingList" class="list-group list-group-numbered"></ul>
+
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
