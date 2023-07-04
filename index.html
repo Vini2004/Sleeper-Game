@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Cores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jogo das Cores</h1>
+  <p>
+    O jogo é muito simples, você deve apenas clicar no botão com a cor correspondente ao alvo.<br>
+    O alvo sempre será a COR da palavra escrita na tela.<br>
+    Clique na cor correta antes que o tempo acabe para receber seu próximo alvo.<br>
+    Seus pontos são computados a cada acerto e termina se você demorar muito ou escolher a cor errada.
+  </p>
+  <div id="buttons">
+    <button id="startButton" class="button" onclick="startGame()">Iniciar</button>
+    <button id="rankingButton" class="button">Ver Ranking</button>
+  </div>
+
+  <div id="randomWord"></div>
+  <div id="timer"></div>
+  <div id="score">0</div> <!-- Elemento para exibir a pontuação -->
+  <div id="level">Nível 1</div>
+
+  <div id="colorGrid">
+    <div class="row">
+      <div class="colorSquare" style="background-color: red;" onclick="checkAnswer('red')"></div>
+      <div class="colorSquare" style="background-color: blue;" onclick="checkAnswer('blue')"></div>
+      <div class="colorSquare" style="background-color: green;" onclick="checkAnswer('green')"></div>
+    </div>
+    <div class="row">
+      <div class="colorSquare" style="background-color: yellow;" onclick="checkAnswer('yellow')"></div>
+      <div class="colorSquare" style="background-color: purple;" onclick="checkAnswer('purple')"></div>
+      <div class="colorSquare" style="background-color: orange;" onclick="checkAnswer('orange')"></div>
+    </div>
+    <div class="row">
+      <div class="colorSquare" style="background-color: pink;" onclick="checkAnswer('pink')"></div>
+      <div class="colorSquare" style="background-color: brown;" onclick="checkAnswer('brown')"></div>
+      <div class="colorSquare" style="background-color: gray;" onclick="checkAnswer('gray')"></div>
+    </div>
+  </div>
+  
+  <div id="restartContainer">
+    <button id="restartButton" class="button hide" onclick="resetGame()">Reiniciar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
