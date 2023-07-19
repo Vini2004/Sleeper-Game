@@ -35,7 +35,7 @@
       <li>Tente coletar o maior número possível de estrelas para aumentar sua pontuação.</li>
       <li>A partida termina quando o personagem colide com um obstáculo.</li>
       <li>Você pode inserir seu nome no final do jogo para registrar sua pontuação no ranking local.</li>
-      <li>Pode acessar também este <a href="https://jogo-sleeper-game-cores.netlify.app/">link</a> para acessar</li>
+      <li>Pode acessar também este <a href="https://jogo-sleeper-game-cores.netlify.app/">link</a> para jogar</li>
   </ol>
 
   <h2>Pré-requisitos</h2>
